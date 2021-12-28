@@ -1455,9 +1455,51 @@ footer .content-footer p{
     }
  }
 
+
 @media (max-width:414px){
     nav{
         display: none;
+    }
+
+    nav.toggle {
+        display:flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        width: 99.9%;
+        height: 80vh;
+        background: white;
+        border-radius: 0;
+        z-index: 999;
+        transform: translateY(0%);
+        transition: transform 1s ease;
+    }
+
+    #about {
+        height: 150vh;
+    }
+
+    .chefs {
+        padding-top: 13rem;
+        flex-direction: column;
+    }
+
+    #about .chefs .perfis{
+        cursor: pointer;
+        width: 19rem;
+        height: 12rem;
+        text-align: center;
+        background: rgba(128, 128, 128, 0.774);
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.733);
+        border-radius: .4rem;
+        margin: 1rem;
+        transition: 1s ease-in;
+    
+    }
+
+    #about .chefs .perfis:hover{
+        height: 28rem;
     }
 }
 
@@ -1487,6 +1529,7 @@ footer .content-footer p{
         width: 40%;
     }
 }
+
 
 
 @media (max-width: 878px){
