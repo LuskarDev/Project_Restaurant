@@ -150,6 +150,7 @@ const closer = document.querySelector('#closer')
 CreateAccount.onclick = () => {
     PageCreateAccount.classList.add('showAccount')
     PageSingAccount.classList.remove('showSing')
+    navbar.classList.remove('toggle');
 
 }
 
@@ -186,8 +187,6 @@ const Disher = document.getElementById('dishers');
 const PageAllDisher = document.getElementById('all-Disher')
 
 const CloseAllDisher = document.querySelector('#closeAllDisher')
-
-console.log(CloseAllDisher)
 
 
 
