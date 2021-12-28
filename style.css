@@ -1,0 +1,1505 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+.sr-only{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.logo{
+    width: 48px;
+    height: 48px;
+}
+
+.loading-bar{
+    width: 130px;
+    height: 2px;
+    background: #cfcfcf;
+    margin-top: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-bar::before{
+    content: "";
+    width: 68px;
+    height: 2px;
+    background: #0073b1;
+    position: absolute;
+    left: -34px;
+    animation:  bluebar 1.5s infinite ease;
+}
+
+@keyframes bluebar {
+    50%{
+        left: 96px;
+    }
+}
+
+
+html {
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.button-to-top{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    font-size: 2.5rem;
+    bottom: 1rem;
+    right: 2rem;
+    color: black;
+    background: white;
+    clip-path: circle();
+    border-radius: 50%;
+    z-index: 999999;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateY(40%);
+
+}
+
+.button-to-top.show-button{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10%);
+}
+
+
+#menu-bar{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    padding: 0.50rem;
+    background: white;
+    z-index: 999;
+    border-radius: 7px;
+    transition: 0.3s;
+    transform: translateY(40%);
+    
+}
+
+#menu-bar img {
+    width: 2rem;
+    cursor: pointer;
+}
+
+#menu-bar.scroll{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10%);
+}
+
+
+#menu-bar:hover{
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+#menu-bar i{
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+section {
+    width: 100%;
+    height: 113vh;
+}
+
+
+a {
+    color: black;
+}
+
+a:hover{
+    color: rgba(0, 0, 0, 0.774);
+    border-radius: 7px;
+}
+
+.nav.toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    border-radius: 8px 0px 0px 8px;
+    z-index: 99;
+    transform: translateX(-1%);
+    transition: transform 0.35s ease;
+}
+
+.nav.toggle ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav.toggle ul li a{
+    font-size:1.5rem;
+}
+
+
+nav > img {
+    object-fit: contain;
+    width: 3rem;
+}
+
+nav {
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 0px 2px;
+}
+
+nav ul {
+    align-items: center;
+    display:flex;
+}
+
+nav ul li{
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    gap: 2rem;
+    color: black;
+    padding: 1rem;
+    list-style: none;   
+}
+
+nav .search-user #account {
+    position: absolute;
+    right: -7rem;
+    top: 3.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0%);
+}
+
+
+nav .search-user #account.ative{
+    position: absolute;
+    right: -3rem;
+    top: 0rem;
+    background: white;
+    color: black;
+    padding: 0.40rem;
+    opacity: 1;
+    border-radius: 4px;
+    visibility: visible;
+    transform: translateY(5%);
+    transition: transform 0.15s ease;
+}
+
+nav .search-user #account p {
+    font-size: .90rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin-right: 0.40rem;
+}
+
+nav .search-user #account p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}                 
+
+nav .search-user i{
+    cursor:pointer;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+}
+
+nav .search-user input{
+    opacity: 0;
+    visibility: hidden;
+    width: 0%;
+}
+
+nav .search-user input.active{
+    border:.1rem solid black;
+    border-radius: 4px;
+    padding: 0.50rem;
+    padding-left: 1.7rem;
+    opacity: 1;
+    visibility: visible;
+    transition: width 1s ease;
+    width: 80%;
+    background: rgba(219, 203, 203, 0.452);
+}
+
+nav .search-user {
+    position: relative;
+}
+
+nav .search-user i:nth-child(2).ativo{
+    width: 15%;
+    position: absolute;
+    left: 0.3rem!important;
+    top: 0.2rem!important;
+    transition: all 1.3s ease;
+}
+
+
+nav .search-user i:nth-child(2){
+    width: 10%;
+    position: absolute;
+    left: 5rem!important;
+    top: 0!important;
+    
+}
+
+button {
+    cursor:pointer;
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    background: grey;
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.849);
+    padding: 1rem;
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition: .25s ease-in-out;
+}
+
+/** create account **/
+
+.container .create-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.356);
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .sing-account.showSing {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-10%);
+    transition: transform .5s ease;
+}
+
+.container .create-account.showAccount {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-10%);
+    transition: transform .5s ease;
+}
+
+.container .create-content > i {
+    font-size: 2rem;
+    margin-right: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.container .create-account .create-content{
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    height: 70%;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.container .sing-account .sing-content h2,
+.container .create-account .create-content h2{
+    margin-bottom: 1rem;
+    font-family: "Oswald",sans-serif;
+}
+
+.container .create-account .create-content p{
+    font-family: "Oswald",sans-serif;
+}
+
+.container .create-account .create-content p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.664);
+    transition: .2s ease;
+}
+
+.container  .create-account .create-content #email{
+    width: 98%;
+}
+
+.container  .create-account .create-content form input {
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.container  .create-account .create-content form .password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .create-account .create-content form button{
+    background: crimson;
+    align-items: center;
+    margin-left: 10rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+}
+
+.container  .create-account img{
+    width: 10vh;
+    margin-bottom: 1.2rem;
+}
+
+/**Sing Account **/
+
+
+.container .sing-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.356);
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .sing-account.showSing {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-10%);
+    transition: transform .5s ease;
+}
+
+
+.container .sing-content > i {
+    font-size: 2rem;
+    margin-right: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.container .sing-account .sing-content{
+    display: flex;
+    align-items: center;
+    width: 27rem;
+    height: 70%;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.container .sing-account .sing-content > p{
+    font-family: "Oswald",sans-serif;
+}
+
+.container .sing-account .sing-content > p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.664);
+    transition: .2s ease;
+}
+
+
+.container  .sing-account .sing-content form .remember-pass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container  .sing-account .sing-content form .remember-pass p{
+    align-items: center;
+    font-size: 0.9rem;
+    font-family: "Oswald",sans-serif;
+}
+
+.container  .sing-account .sing-content form .remember-pass input{
+    margin-top: 1rem;
+}
+
+
+.container  .sing-account .sing-content form input {
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+}
+
+.container  .sing-account .sing-content form .password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .sing-account .sing-content form button{
+    background: crimson;
+    align-items: center;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+}
+
+.container  .sing-account img{
+    width: 10vh;
+    margin-bottom: 1.2rem;
+}
+
+
+#home{
+    background: url("images/bgs/a_\(13\).jpeg") no-repeat;
+    background-size: cover; 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;   
+}
+
+#home .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#home .content .text {
+    margin: 1rem;
+}
+
+#home .content{
+    width: clamp(30vh,10vw);
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+
+#home .content h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#home .content p{
+    text-align: center;
+    font-size: 0.90rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#home .content  h2 span:nth-child(1){
+    color: green;
+}
+
+
+#home .content  h2 span:nth-child(2){
+    color: rgba(236, 12, 57, 0.938);
+}
+
+
+#home .container .sociais {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6rem;
+    font-size: 1.9rem;
+}
+
+#home .sociais i{
+    padding: 0.40rem;
+    cursor: pointer;
+    color: white;
+}
+
+#home .sociais i:hover{
+    border-radius: 50%;
+    padding: 0.40rem;
+    text-align: center;
+    line-height: none;
+    background: black;
+    transition: 0.30s ease;
+}
+
+/* menu */
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    
+}
+
+#menu .title {
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+#menu .title::after{
+    position: absolute;
+    content: " ";
+    background: white;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: .2rem;
+}
+
+#menu .options {
+    display: flex;
+}
+
+#menu .card {
+    width: 100%;
+    cursor: pointer;
+    border-radius: .4rem;
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#menu .card p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    transform: uppercase;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+#menu .card:hover{
+    transform: scale(1.2);
+    transition: 0.45s ease;
+}
+
+#menu .card img{
+    width: 10rem;
+}
+
+/** all dishers **/
+
+.all-Disher {
+    height: 110vh;
+    width: 100%;
+    background: crimson;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-Disher.ShowAllDisher {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+.all-Disher > i{
+    font-size: 2rem;
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    cursor: pointer
+}
+
+.all-Disher > i:hover{
+    transform: scale(1.2);
+    transition: all .25s ease-in-out;
+    color: white;
+}
+
+
+.all-Disher .title {
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 8rem;
+}
+
+.all-Disher .title::after{
+    position: absolute;
+    content: " ";
+    background: white;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: .2rem;
+}
+
+
+.all-Disher .content-disher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.all-Disher .content-disher .dishers{
+    height: 8rem;
+    background: white;
+    margin-left: 0.7rem;
+    padding: 0.5rem;
+    border-radius: 7px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 1px;
+}
+
+.all-Disher .content-disher .dishers:hover{
+    height: 20rem;
+    transition: all 0.25s ease;
+}
+
+.all-Disher .content-disher .dishers:hover .description {
+    opacity:1;
+    visibility:visible;
+}
+
+
+.all-Disher .content-disher .dishers > img {
+    width: 150px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-bottom: .5rem;
+    box-shadow: 0px 0px 3px 1px;
+
+}
+
+.all-Disher .content-disher .dishers .description {
+    opacity:0;
+    visibility:hidden;
+}
+
+.all-Disher .content-disher .dishers .description span{
+    font-family: "Oswald",sans-serif;
+    font-weight: 700;
+}
+
+.all-Disher .content-disher .dishers .description button{
+    font-family: "Oswald",sans-serif;
+    padding: .8rem;
+    background: green;
+}
+
+
+
+
+
+/* about */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+    position: relative;
+}
+
+#about > img {
+    width: 25rem;
+    left: -5rem;
+    position: absolute;
+    top: -5rem;
+    opacity: 0.1;
+}
+
+#about .chefs {
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .title {
+    margin-top: 2rem;
+}
+
+#about .title h2{
+    position: relative;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#about .title h2::after{
+    position: absolute;
+    content: " ";
+    background: black;
+    font-family: "Oswald";
+    font-weight: 700;
+    width: 40%;
+    left: 9.5rem;
+    bottom: 0;
+    height: .2rem;
+}
+
+#about .title p{
+    text-align: center;
+    width: 80vh;
+    font-size: 1rem;
+    font-family: "Poppins",sans-serif;
+}
+
+
+#about .chefs .perfis{
+    cursor: pointer;
+    width: 15rem;
+    height: 12rem;
+    text-align: center;
+    background: rgba(128, 128, 128, 0.774);
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.733);
+    border-radius: .4rem;
+    margin: 1rem;
+    transition: 1s ease-in;
+
+}
+
+#about .perfis:hover{
+    height: 22rem;
+    transition: 1s ease-in;
+}
+
+#about .perfis .stars{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .perfis .stars i{
+    color: rgba(255, 255, 0, 0.836);
+}
+
+#about .perfis:hover p{
+    opacity: 1;
+    visibility: visible;
+    transition: .40s ease;
+}
+
+#about .redes i{
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#about .redes i:hover{
+    color: black;
+}
+
+#about .perfis:hover .redes i{
+    opacity: 1;
+    visibility: visible;
+    padding-left: 1rem;
+    transition: .40s ease
+}
+
+#about .perfis h3{
+    margin-bottom: 0.5rem;
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+
+#about .perfis p{
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    padding-bottom: 0.7rem;
+}
+
+#about .perfis img{
+    padding: 0.50rem;
+    width: 7rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+/** arrow down **/
+
+#about .arrow-down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .arrow-down h2{
+    font-size:1rem;
+    margin-bottom: 2rem;
+}
+
+#about .arrow-down > a i{
+    position: relative;
+    font-size:2rem;
+    transition: 1s ease-in-out;
+    animation: upAnddown 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes upAnddown {
+    0% {
+        bottom: 0.80rem;
+    }
+   
+    50% {
+        bottom: 1rem;
+        
+    }
+    75% {
+        bottom: 2rem;
+        
+    }
+    100% {
+        bottom: 1rem;
+        
+    }
+}
+
+/* about slider vertical */
+
+.more-about{
+    opacity: 0;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 99.1vw;
+    height: 100vh;
+}
+
+.more-about.show{
+    opacity: 1;
+    display: block;
+}
+
+
+.more-about > i{
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.more-about > i:hover{
+    transform: scale(1.2);
+    transition: .25s ease-in;
+}
+
+.left-slide{
+    height: 100vh;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+
+.left-slide > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+
+.left-slide h1{
+    font-family: "Oswald",sans-serif;
+    transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 0.20rem;
+    width: 70%;
+
+}
+
+
+.left-slide p {
+    width: 70%;
+    font-size: 1rem;
+    margin-left: 0.50rem;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform .5s ease-in-out;
+
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+}
+
+.more-about .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size:1rem;
+    padding: 1rem;
+}
+
+.more-about .action-buttons button:hover{
+    color: #222;
+}
+
+.more-about .action-buttons button:focus {
+    outline: none;
+}
+
+.more-about .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-radius: 4px 0px 0px 4px;
+}
+
+.more-about .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-radius: 0px 4px 4px 0px;
+
+}
+
+
+/* ==== TESTIMONIALS ==== */    
+#testimonials {
+    overflow: hidden;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    padding-top: 5rem;
+}
+
+#testimonials .container > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#testimonials .swiper-wrapper {
+    display: flex;
+}
+
+#testimonials blockquote {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    margin-left: 1rem;
+}
+
+#testimonials blockquote p{
+    position: relative;
+    text-indent: 1.875rem;
+    margin-bottom: 1.5rem;
+    color: black;
+
+}
+
+#testimonials blockquote p span {
+    font: 700 2.5rem serif;
+
+    position: absolute;
+    top: -0.8rem;
+    left: -2.125rem;
+    color: black;
+
+}
+
+#testimonials cite {
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
+
+#testimonials cite img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    clip-path: circle();
+    margin-right: 0.5rem;
+}
+
+/* ==== SWIPER ===== */
+
+.swiper-slide {
+    height:auto;
+    padding: 4rem 1rem;
+}
+
+
+/** contact us **/
+
+#contact-us {
+    height: 110vh;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    display: grid;
+    grid-template-areas: 'top top' 'left right';
+    grid-template-columns: 50% 50%;
+
+    
+}
+
+#contact-us .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    grid-area: top;
+}
+
+#contact-us .contact-content{
+    grid-area: left;
+    color: white;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    font-family: "Oswald",sans-serif;
+}
+
+#contact-us .contact-content button{
+    background: green;
+    margin-top: 2rem;
+}
+
+#contact-us .contact-content h3{
+    font-size: 2rem;
+}
+
+#contact-us .form-opinion {
+    width: 70%;
+    height: 85%;
+    background: white;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+
+#contact-us .form-opinion form{
+    align-items: center;
+    grid-area: right;
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+}
+
+#contact-us .form-opinion form .form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contact-us .form-opinion form h2{
+    font-family: "Oswald",sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+#contact-us .form-opinion form button{
+    width: 20%;
+    padding: 0.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+#contact-us .form-opinion form button:hover{
+    background: green;
+    transition: 0.5s ease;
+}
+
+#contact-us .form-opinion form textarea {
+    resize: none;
+    border: .1rem solid black;
+    border-radius: 7px;
+    padding: 0.3rem;
+    width: 100%;
+
+}
+
+#contact-us .form-opinion form input{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/** footer **/
+
+footer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .redes-sociais ul {
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    cursor: pointer;
+} 
+
+footer .redes-sociais ul li{
+    padding: 0.4rem;
+}
+
+footer .content-footer {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+footer .content-footer > img {
+    width: 2rem;
+    padding: 1rem;
+}
+
+footer .content-footer p{
+    font-family: "oswald",sans-serif;
+    font-weight: 700;
+    padding: 0.5rem;
+}
+
+
+@media (max-width:562px){
+   #testimonials .container h2{
+       font-size: 1rem;
+   }
+
+   #about .title p{
+       text-align: center;
+       width: 100%;
+   }
+
+   #about .perfis:hover{
+    height: 27rem;
+    transition: .40s ease;
+    }
+
+    .left-slide {
+        height: 100%;
+        width: 50%;
+        transition: transform .5s ease-in-out;
+    
+    }
+
+    .right-slide {
+        height: 100%;
+        left: 50%;
+        width: 56%;
+        transition: transform .5s ease-in-out;
+    
+    }
+
+    .more-about .action-buttons .down-button {
+        transform: translateX(42%);
+        top: 305px;
+        border-radius: 4px 0px 0px 4px;
+    }
+    
+    .more-about .action-buttons .up-button {
+        top: 250px;
+        transform: translateX(143%);
+        border-radius: 0px 4px 4px 0px;
+    }
+
+}
+
+@media (max-width:360px){
+    #menu-bar{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 3rem;
+        right: 5rem;
+        background: white;
+        z-index: 99999;
+        border-radius: 7px;
+        transition: 0.3s;
+        transform: translateY(40%);
+        
+    }
+
+
+    .container .create-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.356);
+    top: 0;
+    right: -2.2rem;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 9999;
+    visibility: hidden;
+    }
+
+    .container .create-account .create-content > p:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .container .create-account .create-content {
+        height: 100%;
+    }
+
+    .container .create-account .create-content form input {
+        border-radius: 7px;
+        border: .1rem solid black;
+        padding: 0.5rem;
+        background: transparent;
+    }
+
+    .container .create-account .create-content form .btn {
+        margin-left: 6rem;
+    }
+
+    .container .create-account .create-content form .names {
+        margin-left: 3rem;
+    }
+
+    .container .create-account .create-content form #email{
+        width: 67%;
+        margin-left: 3rem;
+
+    }
+
+    .container .create-account .create-content form .password {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    
+    nav .search-user #account.ative{
+        position: absolute;
+        right: 0;
+        top: -4rem;
+        background: white;
+        color: black;
+        padding: 0.40rem;
+        opacity: 1;
+        border-radius: 4px;
+        visibility: visible;
+        transform: translateY(5%);
+        transition: transform 0.15s ease;
+    }
+
+
+    .nav.toggle {
+        display:flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        width: 99.9%;
+        height: 80vh;
+        background: white;
+        border-radius: 0;
+        z-index: 999;
+        transform: translateY(0%);
+        transition: transform 1s ease;
+    }
+
+    .button-to-top{
+       display: none;
+    
+    }
+
+    #about {
+        height: 150vh;
+    }
+
+    .chefs {
+        padding-top: 13rem;
+        flex-direction: column;
+    }
+
+    #about .chefs .perfis{
+        cursor: pointer;
+        width: 19rem;
+        height: 12rem;
+        text-align: center;
+        background: rgba(128, 128, 128, 0.774);
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.733);
+        border-radius: .4rem;
+        margin: 1rem;
+        transition: 1s ease-in;
+    
+    }
+
+    #about .chefs .perfis:hover{
+        height: 28rem;
+    }
+
+}
+
+@media (max-width:388px){
+    #testimonials .container h2{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    #about .arrow-down {
+        position: relative;
+        margin-top: 19rem;
+        font-size:2rem;
+        transition: 1s ease-in-out;
+        animation: upAnddown 1s infinite;
+        cursor: pointer;
+    }
+ }
+
+ @media (max-width:526px){
+     #home {
+    grid-template-columns: 1fr 1fr;
+         
+     }
+
+     #contact-us {
+         height:100%;
+     }
+ }
+
+@media (max-width:620px) {
+    #menu .options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu .options .card {
+        width: 200px;
+        text-align: center;
+    }
+
+    #menu .options .card img {
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 878px){
+
+    
+
+    #contact-us {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-us > h2{
+        margin-top: 1rem;
+    }
+
+    #contact-us .form-opinion{
+        margin-top: 2rem;
+        margin-left: 4rem;
+        margin-bottom: 1rem;
+    }
+
+}
