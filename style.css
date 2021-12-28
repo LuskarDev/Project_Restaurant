@@ -1306,154 +1306,7 @@ footer .content-footer p{
 
 }
 
-@media (max-width:360px){
-    #menu-bar{
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        top: 3rem;
-        right: 5rem;
-        background: white;
-        z-index: 99999;
-        border-radius: 7px;
-        transition: 0.3s;
-        transform: translateY(40%);
-        
-    }
 
-
-    .container .create-account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.356);
-    top: 0;
-    right: -2.2rem;
-    position: absolute;
-    height:100%;
-    width: 100%;
-    opacity: 0;
-    z-index: 9999;
-    visibility: hidden;
-    }
-
-    .container .create-account .create-content > p:hover{
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-    .container .create-account .create-content {
-        height: 100%;
-    }
-
-    .container .create-account .create-content form input {
-        border-radius: 7px;
-        border: .1rem solid black;
-        padding: 0.5rem;
-        background: transparent;
-    }
-
-    .container .create-account .create-content form .btn {
-        margin-left: 6rem;
-    }
-
-    .container .create-account .create-content form .names {
-        margin-left: 3rem;
-    }
-
-    .container .create-account .create-content form #email{
-        width: 67%;
-        margin-left: 3rem;
-
-    }
-
-    .container .create-account .create-content form .password {
-        flex-direction: column;
-    }
-
-    nav {
-        display: none;
-    }
-
-    
-    nav .search-user #account.ative{
-        position: absolute;
-        right: 0;
-        top: -4rem;
-        background: white;
-        color: black;
-        padding: 0.40rem;
-        opacity: 1;
-        border-radius: 4px;
-        visibility: visible;
-        transform: translateY(5%);
-        transition: transform 0.15s ease;
-    }
-
-
-    .nav.toggle {
-        display:flex;
-        position: fixed;
-        top: 0;
-        right: 0;
-        flex-direction: column;
-        width: 99.9%;
-        height: 80vh;
-        background: white;
-        border-radius: 0;
-        z-index: 999;
-        transform: translateY(0%);
-        transition: transform 1s ease;
-    }
-
-    .button-to-top{
-       display: none;
-    
-    }
-
-    #about {
-        height: 150vh;
-    }
-
-    .chefs {
-        padding-top: 13rem;
-        flex-direction: column;
-    }
-
-    #about .chefs .perfis{
-        cursor: pointer;
-        width: 19rem;
-        height: 12rem;
-        text-align: center;
-        background: rgba(128, 128, 128, 0.774);
-        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.733);
-        border-radius: .4rem;
-        margin: 1rem;
-        transition: 1s ease-in;
-    
-    }
-
-    #about .chefs .perfis:hover{
-        height: 28rem;
-    }
-
-}
-
-@media (max-width:388px){
-    #testimonials .container h2{
-        text-align: center;
-        font-size: 0.9rem;
-    }
-
-    #about .arrow-down {
-        position: relative;
-        margin-top: 19rem;
-        font-size:2rem;
-        transition: 1s ease-in-out;
-        animation: upAnddown 1s infinite;
-        cursor: pointer;
-    }
- }
 
 
 @media (max-width:414px){
@@ -1501,9 +1354,107 @@ footer .content-footer p{
     #about .chefs .perfis:hover{
         height: 28rem;
     }
-}
+
+    .container .create-account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.356);
+        top: 0;
+        right: -2.2rem;
+        position: absolute;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 9999;
+        visibility: hidden;
+        }
+    
+        .container .create-account .create-content > p:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    
+        .container .create-account .create-content {
+            height: 100%;
+        }
+    
+        .container .create-account .create-content form input {
+            border-radius: 7px;
+            border: .1rem solid black;
+            padding: 0.5rem;
+            background: transparent;
+        }
+    
+        .container .create-account .create-content form .btn {
+            margin-left: 8rem;
+        }
+    
+        .container .create-account .create-content form .names {
+            margin-left: 4.8rem;
+
+        }
+    
+        .container .create-account .create-content form #email{
+            width: 57%;
+            margin-left: 4.8rem;
+    
+        }
+    
+        .container .create-account .create-content form .password {
+            flex-direction: column;
+        }
+
+        #testimonials .container h2{
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    
+        #about .arrow-down {
+            position: relative;
+            margin-top: 19rem;
+            font-size:2rem;
+            transition: 1s ease-in-out;
+            animation: upAnddown 1s infinite;
+            cursor: pointer;
+        }
+
+        .button-to-top{
+            opacity: 0;
+            visibility: hidden;
+            position: fixed;
+            font-size: 2.5rem;
+            bottom: 5rem;
+            right: 2rem;
+            color: black;
+            background: white;
+            clip-path: circle();
+            border-radius: 50%;
+            z-index: 999999;
+            cursor: pointer;
+            transition: 0.3s;
+            transform: translateY(40%);
+        
+        }
+
+        #contact-us .form-opinion form .form input{
+            border: .1rem solid black;
+            padding: 0.5rem;
+            border-radius: 7px;
+            outline: none;
+        }
+
+        #contact-us .form-opinion form > button {
+            padding: 1rem;
+            background: green;
+            width: 50%;
+        }
+     }
+
 
  @media (max-width:526px){
+
+    
      #home {
     grid-template-columns: 1fr 1fr;
          
