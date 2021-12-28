@@ -1413,6 +1413,39 @@ footer .content-footer p{
             flex-direction: column;
         }
 
+        .container .sing-account {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.356);
+            top: 0;
+            right: -2.5rem;
+            position: absolute;
+            height: 110vh;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .container .sing-account .sing-content{
+            display: flex;
+            align-items: center;
+            width: 27rem;
+            height: 110vh;
+            flex-direction: column;
+            background: white;
+            padding: 1rem;
+            position: absolute;
+            z-index: -99999;
+            border-radius: 4px;
+        }
+
+        .container .sing-account .sing-content form input{
+            border: .1rem solid black;
+            padding: .5rem;
+            border-radius: 7px;
+        }
+
         #testimonials .container h2{
             text-align: center;
             font-size: 0.9rem;
