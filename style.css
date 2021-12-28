@@ -1455,6 +1455,12 @@ footer .content-footer p{
     }
  }
 
+@media (max-width:414px){
+    nav{
+        display: none;
+    }
+}
+
  @media (max-width:526px){
      #home {
     grid-template-columns: 1fr 1fr;
