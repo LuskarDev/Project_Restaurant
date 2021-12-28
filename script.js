@@ -150,12 +150,15 @@ const closer = document.querySelector('#closer')
 CreateAccount.onclick = () => {
     PageCreateAccount.classList.add('showAccount')
     PageSingAccount.classList.remove('showSing')
-    navbar.classList.remove('toggle');
+    navbar.classList.remove('toggle')
+    MenuButton.style.display = "none";
+
 
 }
 
 closer.onclick = () => {
     PageCreateAccount.classList.remove('showAccount')
+    MenuButton.style.display = "flex";
 
 }
 
@@ -167,15 +170,22 @@ const PageSingAccount = document.querySelector('.sing-account');
 
 const fechar = document.querySelector('#fechar')
 
+const content = document.querySelector(".content")
+
 
 SingAccount.onclick = () => {
     PageSingAccount.classList.add('showSing')
     PageCreateAccount.classList.remove('showAccount')
+    navbar.classList.remove('toggle')
+    content.style.display = "none";
+    MenuButton.style.display = "none";
 
 }
 
 fechar.onclick = () => {
     PageSingAccount.classList.remove('showSing');
+    content.style.display = "flex";
+    MenuButton.style.display = "flex";
 
 }
 
