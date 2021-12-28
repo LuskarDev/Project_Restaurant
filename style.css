@@ -1329,6 +1329,14 @@ footer .content-footer p{
         transition: transform 1s ease;
     }
 
+    #home .container .sociais i {
+        color: black
+    }
+
+    #home .container .sociais i:hover{
+        background: white;
+    }
+
     #about {
         height: 150vh;
     }
