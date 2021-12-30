@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 1;
+    z-index: 99999999999;
 }
 
 .logo{
@@ -65,6 +65,7 @@
 
 
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -133,8 +134,9 @@ html {
 }
 
 section {
-    overflow-X: hidden;
-    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 101%;
     height: 113vh;
 }
 
@@ -178,7 +180,7 @@ nav > img {
 }
 
 nav {
-    width: 100%;
+    width: 101%;
     height: 5rem;
     display:flex;
     justify-content: space-around;
@@ -232,11 +234,12 @@ nav .search-user #account p {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     margin-right: 0.40rem;
+    cursor: pointer;
+
 }
 
 nav .search-user #account p:hover{
     text-decoration: underline;
-    cursor: pointer;
 }                 
 
 nav .search-user i{
@@ -289,11 +292,11 @@ button {
     font-size: 1rem;
     font-family: 'Oswald', sans-serif;
     color: white;
-    background: grey;
+    background: crimson;
     border: none;
     border-radius: 4px;
-    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.849);
-    padding: 1rem;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.849);
+    padding: 0.8rem;
 }
 
 button:hover{
@@ -641,7 +644,7 @@ button:hover{
 /** all dishers **/
 
 .all-Disher {
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     background: crimson;
     display: none;
@@ -700,6 +703,7 @@ button:hover{
 }
 
 .all-Disher .content-disher .dishers{
+    max-width: 300px;
     height: 8rem;
     background: white;
     margin-left: 0.7rem;
@@ -818,7 +822,7 @@ button:hover{
     width: 15rem;
     height: 12rem;
     text-align: center;
-    background: rgba(128, 128, 128, 0.774);
+    background: rgb(128, 128, 128);
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.733);
     border-radius: .4rem;
     margin: 1rem;
@@ -843,16 +847,28 @@ button:hover{
 }
 
 #about .perfis:hover p{
+    margin-top: 1rem;
     opacity: 1;
     visibility: visible;
     transition: .40s ease;
 }
 
-#about .redes i{
+#about .perfis .redes i{
+    width: 50px;
     opacity: 0;
     visibility: hidden;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 1px 1px 1px rgba(43, 42, 42, 0.637);
+}
+
+#about .perfis .redes a i:nth-child(1){
+    padding: 0.3rem;
+    width: 16%;
+    border-radius: 4px;
+    background-color: #9921e8;
+    background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
 }
 
 #about .redes i:hover{
@@ -912,15 +928,11 @@ button:hover{
 
 @keyframes upAnddown {
     0% {
-        bottom: 0.80rem;
+        bottom: 0.85rem;
     }
    
     50% {
-        bottom: 1rem;
-        
-    }
-    75% {
-        bottom: 2rem;
+        bottom: 1.4rem;
         
     }
     100% {
@@ -1058,7 +1070,7 @@ button:hover{
     overflow: hidden;
     background: black;
     height: 100vh;
-    width: 100%;
+    width: 101%;
     padding-top: 5rem;
 }
 
@@ -1224,10 +1236,63 @@ button:hover{
     width: 100%;
 }
 
+/** news letter **/
+
+.News-letter{
+    height: 24vh;
+    position: relative;
+}
+
+.News-letter > img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 40rem;
+    z-index: 0;
+}
+
+.News-letter .news-letter-content {
+    padding: 0.5rem;
+    align-items: center;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.News-letter .text{
+    color: black;
+    margin: 1.4rem;
+}
+
+.News-letter .text h2{
+    font-family: "Oswald",sans-serif;
+    margin-bottom: .4rem;
+}
+
+.News-letter .News-letters-input {
+    width: 95%;
+    border: .1rem solid rgba(124, 122, 122, 0.562);
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.News-letter .News-letters-input input{
+    width: 80%;
+}
+
+.News-letter .News-letters-input button{
+    background: crimson;
+    width: 15%;
+    margin-left: 0.5rem;
+}
+
 /** footer **/
 
 footer {
-    width: 100%;
+    background:black;
+    color: white;
+    width: 101%;
     height: 60%;
     display: flex;
     justify-content: space-between;
@@ -1310,6 +1375,8 @@ footer .content-footer p{
 
 
 @media (max-width:414px){
+
+    /* nav */
     nav{
         display: none;
     }
@@ -1320,14 +1387,62 @@ footer .content-footer p{
         top: 0;
         right: 0;
         flex-direction: column;
-        width: 99.9%;
+        width: 100%;
         height: 80vh;
         background: white;
         border-radius: 0;
-        z-index: 999;
-        transform: translateY(0%);
-        transition: transform 1s ease;
+        z-index: 9999999;
     }
+
+
+    nav .search-user #user {
+        margin-left: 1rem;
+    }
+
+    nav .search-user #account.ative{
+        position: absolute;
+        right: 2rem;
+        top: -6rem;
+        background: white;
+        color: black;
+        padding: 0.40rem;
+        opacity: 1;
+        border-radius: 4px;
+        visibility: visible;
+        transform: translateY(10%);
+        transition: transform 0.35s ease-in;
+    }
+
+    nav .search-user #account p a:hover{
+        background: grey;
+        color: white;
+    }
+
+    nav .search-user #account p{
+        margin-top: 1.1rem;
+    }
+
+    nav .search-user #account p:hover{
+        text-decoration: none;
+    }      
+
+    nav .search-user #account p a{
+        text-decoration: none;
+        border: .1rem solid grey;
+        padding: 0.4rem;
+        border-radius: 4px;
+    }
+
+
+    nav .search-user i:nth-child(2).ativo{
+    width: 15%;
+    position: absolute;
+    left: -0.3rem!important;
+    top: 0.2rem!important;
+    transition: all 1.3s ease;
+}
+
+    
 
     #home .container .sociais i {
         color: black
@@ -1337,9 +1452,53 @@ footer .content-footer p{
         background: white;
     }
 
+    /** about **/
+
     #about {
+        overflow-y: hidden;
         height: 150vh;
     }
+
+    #about .title {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 3.9rem;
+
+    }
+    
+    #about .title h2{
+        position: relative;
+        top: -1rem;
+        font-size: 2rem;
+        color: black;
+        margin-bottom: 1rem;
+    }
+    
+    #about .title h2::after{
+        position: absolute;
+        content: " ";
+        background: black;
+        font-family: "Oswald";
+        font-weight: 700;
+        width: 50%;
+        left: 6.2rem;
+        bottom: 0;
+        height: .2rem;
+    }
+    
+    #about .title p{
+        margin-left: 2.5rem;
+        margin-right: 1rem;
+        margin-bottom: 4.2rem;
+        text-align: center;
+        width: 80%;
+        font-size: .9rem;
+        font-family: "Poppins",sans-serif;
+        font-weight: 400;
+    }
+    
+
+    
 
     .chefs {
         padding-top: 13rem;
@@ -1348,19 +1507,38 @@ footer .content-footer p{
 
     #about .chefs .perfis{
         cursor: pointer;
-        width: 19rem;
+        width: 16rem;
         height: 12rem;
         text-align: center;
-        background: rgba(128, 128, 128, 0.774);
+        background: rgba(0, 0, 0, 0.76);
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.733);
         border-radius: .4rem;
-        margin: 1rem;
+        margin: 0.8rem;
         transition: 1s ease-in;
     
     }
 
     #about .chefs .perfis:hover{
-        height: 28rem;
+        height: 30rem;
+    }
+
+
+    #about .chefs .perfis:nth-last-child(3){
+        margin-top: 10rem;
+    }
+
+    #about .chefs .perfis:nth-last-child(1){
+        margin-bottom: 18rem;
+    }
+
+    #about .arrow-down {
+        position: relative;
+        margin-bottom: 2rem;
+        top: 13rem;
+        font-size:2rem;
+        transition: 1s ease-in-out;
+        animation: upAnddown 1s infinite;
+        cursor: pointer;
     }
 
     .container .create-account {
@@ -1448,24 +1626,17 @@ footer .content-footer p{
 
         #testimonials .container h2{
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
     
-        #about .arrow-down {
-            position: relative;
-            margin-top: 19rem;
-            font-size:2rem;
-            transition: 1s ease-in-out;
-            animation: upAnddown 1s infinite;
-            cursor: pointer;
-        }
+      
 
         .button-to-top{
             opacity: 0;
             visibility: hidden;
             position: fixed;
             font-size: 2.5rem;
-            bottom: 5rem;
+            bottom: 10rem;
             right: 2rem;
             color: black;
             background: white;
@@ -1479,16 +1650,83 @@ footer .content-footer p{
         }
 
         #contact-us .form-opinion form .form input{
-            border: .1rem solid black;
+            border: .1rem solid rgb(161, 159, 159);
             padding: 0.5rem;
-            border-radius: 7px;
+            border-radius: 4px;
             outline: none;
         }
 
         #contact-us .form-opinion form > button {
-            padding: 1rem;
+            padding: 0.6rem;
             background: green;
             width: 50%;
+        }
+
+        #contact-us .contact-content h3{
+            margin-right: 1rem;
+            font-size: 1.8rem;
+        }
+
+        #contact-us .contact-content p{
+            margin-right: 1rem;
+        }
+
+        /** news-letter */
+
+        .News-letter {
+            height: 100%;
+        }
+        
+        .News-letter > img {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            right: -1.2rem;
+            top: 2.2rem;
+            z-index: 0;
+        }
+        
+        .News-letter .news-letter-content {
+            padding: 0.5rem;
+            align-items: center;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .News-letter .text{
+            color: black;
+            margin: 1.4rem;
+        }
+        
+        .News-letter .text h2{
+            font-family: "Oswald",sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: .4rem;
+        }
+
+        .News-letter .text p{
+            font-family: "Oswald",sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .News-letter .News-letters-input {
+            width: 95%;
+            border: .1rem solid rgba(124, 122, 122, 0.562);
+            background: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
+        }
+        
+        .News-letter .News-letters-input input{
+            width: 80%;
+        }
+        
+        .News-letter .News-letters-input button{
+            background: crimson;
+            width: 15%;
+            margin-left: 0.5rem;
         }
      }
 
