@@ -1409,7 +1409,7 @@ footer .content-footer p{
         opacity: 1;
         border-radius: 4px;
         visibility: visible;
-        transform: translateY(10%);
+        transform: translateY(-15%);
         transition: transform 0.35s ease-in;
     }
 
@@ -1427,8 +1427,9 @@ footer .content-footer p{
     }      
 
     nav .search-user #account p a{
-        text-decoration: none;
         border: .1rem solid grey;
+        background: crimson;
+        color: white;
         padding: 0.4rem;
         border-radius: 4px;
     }
@@ -1577,18 +1578,27 @@ footer .content-footer p{
         }
     
         .container .create-account .create-content form .names {
-            margin-left: 4.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .container .create-account .create-content form .names input {
+            width: 45%;
         }
     
         .container .create-account .create-content form #email{
-            width: 57%;
-            margin-left: 4.8rem;
-    
+            width: 92%;
+            margin-left: 0.8rem;
         }
     
         .container .create-account .create-content form .password {
-            flex-direction: column;
+            display: flex;
+        }
+
+        .container .create-account .create-content form .password input {
+            width: 45%;
+
         }
 
         .container .sing-account {
@@ -1681,8 +1691,8 @@ footer .content-footer p{
             position: absolute;
             width: 100px;
             height: 100px;
-            right: -1.2rem;
-            top: 2.2rem;
+            right: -0.5rem;
+            top: 2.8rem;
             z-index: 0;
         }
         
@@ -1706,6 +1716,7 @@ footer .content-footer p{
         }
 
         .News-letter .text p{
+            width: 89%;
             font-family: "Oswald",sans-serif;
             font-size: 0.9rem;
         }
@@ -1720,12 +1731,15 @@ footer .content-footer p{
         }
         
         .News-letter .News-letters-input input{
-            width: 80%;
+            width: 75%;
+            border: .1rem solid black;
+            padding: 0.5rem;
+            border-radius: 4px;
         }
         
         .News-letter .News-letters-input button{
             background: crimson;
-            width: 15%;
+            width: 20%;
             margin-left: 0.5rem;
         }
      }
