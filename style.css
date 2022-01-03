@@ -648,7 +648,7 @@ button:hover{
 
 .all-Disher {
     height: 100vh;
-    width: 100%;
+    width: 101%;
     background-color :#ee9617;
     background-image :linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
 
@@ -868,7 +868,7 @@ button:hover{
 
 .all-Drinks {
     height: 110vh;
-    width: 100%;
+    width: 101%;
     background-color: #20bf55;
     background-image:linear-gradient(315deg, #20bf55 0%, #01baef 74%);
     display: none;
@@ -1092,7 +1092,7 @@ button:hover{
 
 .all-Dessert {
     height: 110vh;
-    width: 100%;
+    width: 101%;
     background-color: #fc5296;
     background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%); 
     flex-direction: column;
@@ -1998,7 +1998,7 @@ footer .content-footer p{
         right: 0;
         flex-direction: column;
         width: 100%!important;
-        height: 80vh;
+        height: 100vh;
         background: white;
         border-radius: 0;
         z-index: 9999999;
@@ -2025,8 +2025,8 @@ footer .content-footer p{
     nav .search-user i:nth-child(2).ativo{
     width: 15%;
     position: absolute;
-    left: -0.3rem!important;
-    top: 0.2rem!important;
+    left: -2rem!important;
+    top: 0rem!important;
     transition: all 1.3s ease;
 }
 
@@ -2212,7 +2212,11 @@ footer .content-footer p{
 
         .container .create-account .create-content form .password input {
             width: 45%;
+        }
 
+        .container .create-account .create-content p{
+            text-align: center;
+            margin-left: 4rem;
         }
 
         .container .sing-account {
@@ -2232,7 +2236,7 @@ footer .content-footer p{
         .container .sing-account .sing-content{
             display: flex;
             align-items: center;
-            width: 27rem;
+            width: 100%;
             height: 110vh;
             flex-direction: column;
             background: white;
