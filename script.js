@@ -1,3 +1,15 @@
+
+
+     var loader = document.querySelector('.loading-screen')
+
+     window.addEventListener("load", function(){
+       
+       setInterval(() => {
+           loader.style.display = "none";
+       }, 900)
+   })
+
+
 /** Button de busca */
 
 ButtonSearch = document.getElementById("search");
