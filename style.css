@@ -1889,8 +1889,13 @@ footer .content-footer {
     align-items: center;
 }
 
+footer .contatos-menu {
+    display: none;
+}
+
 footer .contatos {
     width: 20%;
+    height: 80%;
     background: black;
     border: none;
     box-shadow: 0px 0px 0px 0px;
@@ -1899,7 +1904,7 @@ footer .contatos {
 }
 
 footer .contatos ul{
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
 }
@@ -1918,6 +1923,7 @@ footer .contatos ul li a{
     font-size: 0.7rem;
 
 }
+
 
 footer .content-footer > img {
     width: 2rem;
@@ -1991,7 +1997,7 @@ footer .content-footer p{
         top: 0;
         right: 0;
         flex-direction: column;
-        width: 100%;
+        width: 100%!important;
         height: 80vh;
         background: white;
         border-radius: 0;
@@ -2054,7 +2060,7 @@ footer .content-footer p{
     /** all-dessert **/
 
     .all-Dessert  .content-dessert .dessert:hover{
-        height: 22rem;
+        height: 20rem;
         transition: all 1s ease;
     }
 
@@ -2337,15 +2343,14 @@ footer .content-footer p{
             background:black;
             color: white;
             width: 100%;
-            height: 40vh;
-            display: grid;
-            grid-template-areas: 'top top' 'left right';
-            grid-template-columns: 50% 50% ; 
+            height: 72vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
 footer .redes-sociais {
-    grid-area: left;
-    display: grid;
     width: 100%;
     margin: 1rem;
     margin-left: 2rem;
@@ -2375,17 +2380,15 @@ footer .redes-sociais ul li:hover{
 
 footer .content-footer {
     font-size: 1.4rem;
-    grid-area: top;
     width: 50vh;
-    display: grid;
     justify-content: center;
     align-items: center;
 }
 
 footer .contatos {
     display: grid;
-    grid-area: right;
     width: 100%;
+    height: 20%;
     background: black;
     border: none;
     box-shadow: 0px 0px 0px 0px;
@@ -2433,9 +2436,7 @@ footer .content-footer p{
 }
 
 
-footer .menu-footer {
-    display: none;
-}
+
 
         /** news-letter */
 
@@ -2569,7 +2570,7 @@ footer .menu-footer {
 
 @media (max-width: 878px){
 
-    
+  
 
     #contact-us {
         display: flex;
@@ -2584,16 +2585,26 @@ footer .menu-footer {
         margin-top: 2rem;
         margin-left: 4rem;
         margin-bottom: 1rem;
+        width: 70%;
+        height: 50%!important;
+        background: white;
+        padding: 1rem;
+        border-radius: 7px;
     }
 
 }
 
 
 @media (max-width: 1358px){
+
+    nav {
+         display: none;
+    }
+
     nav.toggle {
         display:flex;
         position: fixed;
-        top: 0;
+        top: 7rem!important;
         right: 0!important;
         flex-direction: column;
         width: 100%!important;
@@ -2601,7 +2612,15 @@ footer .menu-footer {
         background: white;
         border-radius: 0;
         z-index: 9999999;
-        transform: translateY(-10%)!important;
+        transform: translateY(-20%)!important;
         transition: transform .25s ease;
+    }
+
+    #contact-us .form-opinion {
+        width: 70%;
+        height: 70%!important;
+        background: white;
+        padding: 1rem;
+        border-radius: 7px;
     }
 }
