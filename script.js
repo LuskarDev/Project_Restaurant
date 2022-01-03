@@ -4,7 +4,6 @@ ButtonSearch = document.getElementById("search");
 
 InputSearch = document.querySelector("input");
 
-ButtonAccount = document.getElementById("user")
 
 OptionAccount = document.getElementById("account");
 
@@ -16,20 +15,9 @@ ButtonSearch.onclick = () => {
 
 }
 
-ButtonAccount.onclick = () => {
-    OptionAccount.classList.toggle("ative");
-}
 
 /** preload */
 
-var loader = document.querySelector('.loading-screen')
-
-window.addEventListener("load", function(){
-    
-    setInterval(() => {
-        loader.style.display = "none";
-    }, 900)
-})
 
 
 
@@ -182,18 +170,9 @@ SingAccount[0].onclick = () => {
     PageSingAccount.classList.add('showSing')
     PageCreateAccount.classList.remove('showAccount')
     navbar.classList.remove('toggle')
-    content.style.display = "none";
     MenuButton.style.display = "none";
 }
 
-SingAccount[1].onclick = () => {
-    PageSingAccount.classList.add('showSing')
-    PageCreateAccount.classList.remove('showAccount')
-    navbar.classList.remove('toggle')
-    content.style.display = "none";
-    MenuButton.style.display = "none";
-
-}
 
 fechar.onclick = () => {
     PageSingAccount.classList.remove('showSing');
@@ -205,20 +184,122 @@ fechar.onclick = () => {
 
 /** options menu */
 
-const Disher = document.getElementById('dishers');
+const Disher = document.querySelectorAll('#dishers');
 
 const PageAllDisher = document.getElementById('all-Disher')
 
 const CloseAllDisher = document.querySelector('#closeAllDisher')
 
 
-
-Disher.onclick = () => {
+Disher[0].onclick = () => {
     PageAllDisher.classList.add('ShowAllDisher')
+    PageAllDessert.classList.remove('ShowAllDessert')
+
 }
+
+Disher[1].onclick = () => {
+    PageAllDisher.classList.add('ShowAllDisher')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+    PageAllDessert.classList.remove('ShowAllDessert')
+
+
+}
+
+Disher[2].onclick = () => {
+    PageAllDisher.classList.add('ShowAllDisher')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+    PageAllDessert.classList.remove('ShowAllDessert')
+
+}
+
+Disher[3].onclick = () => {
+    PageAllDisher.classList.add('ShowAllDisher')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+
+}
+
 CloseAllDisher.onclick = () => {
     PageAllDisher.classList.remove('ShowAllDisher')
 }
+
+// drinks options 
+
+const Drinks = document.querySelectorAll('#drink');
+
+const PageAllDrinks = document.getElementById('all-drinks')
+
+const CloseAllDrinks = document.querySelector('#closeAllDrinks')
+
+
+
+Drinks[0].onclick = () => {
+    PageAllDrinks.classList.add('ShowAllDrinks')
+}
+
+Drinks[1].onclick = () => {
+    PageAllDrinks.classList.add('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+    PageAllDessert.classList.remove('ShowAllDessert')
+
+}
+
+Drinks[2].onclick = () => {
+    PageAllDrinks.classList.add('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+    PageAllDessert.classList.remove('ShowAllDessert')
+
+}
+
+Drinks[3].onclick = () => {
+    PageAllDrinks.classList.add('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+    PageAllDessert.classList.remove('ShowAllDessert')
+
+}
+
+CloseAllDrinks.onclick = () => {
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+}
+
+
+
+// dessert options 
+
+const dessert = document.querySelectorAll('#dessert');
+
+const PageAllDessert = document.querySelector('.all-Dessert')
+
+const CloseAllDessert = document.querySelector('#closeAllDessert')
+
+
+dessert[0].onclick = () => {
+    PageAllDessert.classList.add('ShowAllDessert')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+}
+
+dessert[1].onclick = () => {
+    PageAllDessert.classList.add('ShowAllDessert')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+}
+
+dessert[2].onclick = () => {
+    PageAllDessert.classList.add('ShowAllDessert')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+}
+
+dessert[3].onclick = () => {
+    PageAllDessert.classList.add('ShowAllDessert')
+    PageAllDrinks.classList.remove('ShowAllDrinks')
+    PageAllDisher.classList.remove('ShowAllDisher')
+}
+
+CloseAllDessert.onclick = () => {
+    PageAllDessert.classList.remove('ShowAllDessert')
+}
+
 
 
 window.addEventListener('scroll', function () {
