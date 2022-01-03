@@ -169,7 +169,7 @@ closer.onclick = () => {
 
 /* Sing account */
 
-const SingAccount = document.querySelectorAll('#Sing');
+const SingAccount = document.querySelector('#Sing');
 
 const PageSingAccount = document.querySelector('.sing-account');
 
@@ -178,10 +178,12 @@ const fechar = document.querySelector('#fechar')
 const content = document.querySelector(".content")
 
 
-SingAccount[0].onclick = () => {
+
+SingAccount.onclick = () => {
     PageSingAccount.classList.add('showSing')
     PageCreateAccount.classList.remove('showAccount')
     navbar.classList.remove('toggle')
+    content.style.display = "none";
     MenuButton.style.display = "none";
 }
 
