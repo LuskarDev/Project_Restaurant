@@ -6,7 +6,7 @@
        
        setInterval(() => {
            loader.style.display = "none";
-       }, 900)
+       }, 400)
    })
 
 
