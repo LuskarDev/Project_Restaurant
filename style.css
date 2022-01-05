@@ -356,8 +356,9 @@ button:hover{
 }
 
 .container .create-account .create-content p{
+    text-align: center;
     font-family: "Oswald",sans-serif;
-    margin-right: 1.2rem;
+    margin-left: 1.5rem;
 }
 
 .container .create-account .create-content p:hover{
@@ -586,9 +587,86 @@ button:hover{
     transition: 0.30s ease;
 }
 
+/* Make a reservation */
+
+.create-Reservation {
+    background: url('images/bgs/a_(10).jpeg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-Reservation .create-reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius : 7px;
+    border: .1rem solid black;
+    height: 70vh;
+    width: 50%;
+    padding: 1rem;
+    background-color: #9dc5c3b9;
+    background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5cd3 74%);
+}
+
+.create-Reservation .create-reservation > p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.create-Reservation .create-reservation > img {
+    width: 70px;
+    margin-bottom: 1rem;
+}
+
+.create-Reservation .create-reservation > h2 {
+    font-family: "Oswald",sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.create-Reservation .create-reservation form {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.create-Reservation .create-reservation form #age {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.create-Reservation .create-reservation form input {
+    color: white;
+    font-family: "Oswald",sans-serif;
+    background: transparent;
+    padding: 0.5rem;
+    border: .1rem solid black;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.create-Reservation .create-reservation form button {
+    margin-bottom: 1rem;
+    
+}
+
+.create-Reservation .create-reservation form #count {
+    width: 20%;
+    margin-left: 3.5rem;
+
+}
+
+
 /* menu */
 
-#menu{
+#menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -673,6 +751,7 @@ button:hover{
 
 .all-Disher .outher-options ul li {
     list-style: none;
+    height: 46px;
     margin: 0.5rem;
     background : white;
     padding: 0.5rem;
@@ -711,7 +790,7 @@ button:hover{
 }
 
 .all-Disher .outher-options ul li img{
-    width: 40px;
+    width: 35px;
 }
 
 .all-Disher .outher-options ul li:nth-child(2)::before{
@@ -815,7 +894,7 @@ button:hover{
     background: white;
     margin-left: 0.7rem;
     padding: 0.5rem;
-    border-radius: 7px;
+    border-radius: 60%;
     text-align: center;
     align-items: center;
     display: flex;
@@ -826,6 +905,7 @@ button:hover{
 
 .all-Disher .content-disher .dishers:hover{
     height: 20rem;
+    border-radius: 4px;
     transition: all 1s ease;
 }
 
@@ -1035,7 +1115,7 @@ button:hover{
     background: white;
     margin-left: 0.7rem;
     padding: 0.5rem;
-    border-radius: 7px;
+    border-radius: 4px;
     text-align: center;
     align-items: center;
     display: flex;
@@ -1047,6 +1127,7 @@ button:hover{
 
 .all-Drinks .content-drink .drinks:hover{
     height: 18rem;
+    border-radius: 4px;
     transition: all 1s ease;
 }
 
@@ -1260,17 +1341,18 @@ button:hover{
     background: white;
     margin-left: 0.7rem;
     padding: 0.5rem;
-    border-radius: 7px;
+    border-radius: 60%;
     text-align: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     box-shadow: 0px 0px 7px 1px;
-}
+}  
 
 .all-Dessert  .content-dessert .dessert:hover{
     height: 17rem;
+    border-radius: 7px;
     transition: all 1s ease;
 }
 
@@ -1692,7 +1774,7 @@ button:hover{
     background-color: #7f5a83;
     background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
     display: grid;
-    grid-template-areas: 'top top' 'left right';
+    grid-template-areas: 'left right';
     grid-template-columns: 50% 50%;
 
     
@@ -1725,8 +1807,9 @@ button:hover{
 }
 
 #contact-us .form-opinion {
+    margin-top: 5rem;
     width: 70%;
-    height: 85%;
+    height: 70%;
     background: white;
     padding: 1rem;
     border-radius: 7px;
@@ -2038,6 +2121,13 @@ footer .content-footer p{
 
     #home .container .sociais i:hover{
         background: white;
+    }
+
+    /* reservation */ 
+
+    .create-Reservation .create-reservation {
+        height: 70vh;
+        width: 100%;
     }
 
     /** all-drinks **/ 
