@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,7 +74,10 @@
                                     <i class="fab fa-whatsapp"></i>
                                     <i class="fab fa-facebook"></i>
                                     <i class="fab fa-instagram"></i>
-                </div>
+        </div>
+
+              
+
         <div class="create-account">
 
 
@@ -124,11 +127,11 @@
 
                 <form action="">
                     <label class="sr-only" for="email">Email</label>
-                    <input placeholder="Email" type="text" name="email" id="email">
+                    <input placeholder="Email" type="text" name="emails" id="emails">
 
                     <div class="password">
                         <label  class="sr-only" for="password"></label>
-                        <input placeholder="Password" type="password" name="password" id="password">
+                        <input placeholder="Password" type="password" name="passwords" id="passwords">
                     </div>
 
                     <div class="remember-pass">
@@ -155,7 +158,7 @@
             <div class="text">
                 <h2>come create beautiful memories with your <span>friends</span> and <span>family</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam quibusdam, praesentium maiores voluptates nobisdolor sit amet consectetur adipisicing elit. Impedit ipsam quibusdam, praesentium maiores voluptates no.</p>
-                <button>Reservation</button>
+                <button><a href="#reservation">Reservation</a></button>
             </div>
 
         </div>
@@ -165,6 +168,44 @@
 
     </section>
 
+    <section id="reservation" class="create-Reservation">
+
+
+        <div class="create-reservation">
+
+            <img src="images/icons/fork-and-knife-cutlery-circle-interface-symbol-for-restaurant.png" alt="logo">
+            <h2>Making Reservation...</h2>
+            <form action="">
+                <div class="name-date">
+                    <label  class="sr-only" for="name">Name Complete</label>
+                    <input placeholder="Name" type="text" name="name" id="name">
+
+
+                    <label  class="sr-only" for="lastname">Date</label>
+                    <input placeholder="Date" type="date" name="number" id="age">
+
+                </div>
+
+
+                <div class="count-People">
+                    <label  class="sr-only" for="password"></label>
+                    <input placeholder="Person" type="number" name="count" id="count">
+
+
+
+                     <label class="sr-only" for="Whats">whatsapp</label>
+                     <input placeholder="whatsapp" type="number" name="whatsappNumber" id="whatsappNumber">
+
+                </div>
+
+                <button class="reservation">Make Reservation</button>
+
+            </form>
+
+            <p id="Sing">You have a Account ?</p>
+
+        </div>
+    </section>
 
     <section id="menu">
 
@@ -620,7 +661,7 @@
     <section class="section" id="testimonials">
         <div class="container">
             
-                <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+                <h2 class="title">Testimonials from those who have been here</h2>
             
                 <div class="testimonials swiper-container">
                     <div class="swiper-wrapper">
@@ -728,10 +769,9 @@
 
 
     <section id="contact-us">
-        <h2 class="title">Contact Us</h2>
         <div class="contact-content">
-            <h3>Entre em contato conosco</h3>
-            <p>Queremos saber a sua opinião para que possamos melhorar cada dia mais...</p>
+            <h3>Contact us</h3>
+            <p>We want to know your opinion so that we can improve every day more...</p>
             <button><i class="fab fa-whatsapp"></i> Contact Us</button>
         </div>
 
@@ -758,12 +798,12 @@
         <img src="images/icons/Untitled.png" alt="bolsa de descontos e cupons">
         <div class="news-letter-content">
             <div class="text">
-                <h2>Recebe ofertas Exclusivas no seu Email</h2>
-                <p>Receba Cupons de Descontos de 20% á 30% e várias Outras ofertas Exclusivas Só para você </p>
+                <h2>Receive Exclusive offers in your Email...</h2>
+                <p>Receive Discount Coupons from 20% to 30% and several Other Exclusive offers just for you </p>
             </div>
              <div class="News-letters-input">
                       <input type="email" name="News-letter" id="News-letter">
-                     <button type="submit">Enviar</button>
+                     <button type="submit">Send</button>
              </div>
         </div>      
     </section>
@@ -962,6 +1002,8 @@ ScrollReveal().reveal('.options', {delay: 500});
 ScrollReveal().reveal('.text', {delay: 500});
 ScrollReveal().reveal('.News-letters-input', {delay: 500});
 ScrollReveal().reveal('.img', {delay: 500});
+ScrollReveal().reveal('.create-reservation', {delay: 500});
+
 
 
 
