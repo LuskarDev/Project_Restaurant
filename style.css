@@ -5,6 +5,31 @@
     text-decoration: none;
 }
 
+/** google translate **/
+
+.translated-ltr{margin-top:-40px;}
+.translated-ltr{margin-top:-40px;}
+.goog-te-banner-frame {display: none;}
+
+.goog-logo-link {
+   display:none !important;
+} 
+
+.goog-te-gadget{
+   color: transparent !important;
+}
+
+.goog-te-gadget-simple {
+    padding: 0.9rem;
+    height: 25px;
+}
+
+#google_translate_element{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+}
 
 
 .sr-only{
@@ -62,7 +87,6 @@
         left: 96px;
     }
 }
-
 
 html {
     overflow-x: hidden;
@@ -150,34 +174,6 @@ a:hover{
     border-radius: 7px;
 }
 
-.nav.toggle {
-    position: fixed;
-    top: 0;
-    right: -8rem;
-    flex-direction: column;
-    width: 35%;
-    height: 100vh;
-    background: white;
-    border-radius: 8px 0px 0px 8px;
-    z-index: 99;
-    transform: translateX(-20%);
-    transition: transform .25s ease;
-}
-
-.nav.toggle ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav.toggle ul li a{
-    font-size:1.5rem;
-}
-
-
-nav > img {
-    object-fit: contain;
-    width: 3rem;
-}
 
 nav {
     width: 100%;
@@ -189,6 +185,16 @@ nav {
     background: #fff;
     box-shadow: 0px 0px 2px;
 }
+
+
+
+
+nav > img {
+    object-fit: contain;
+    width: 3rem;
+}
+
+
 
 nav ul {
     align-items: center;
@@ -204,6 +210,31 @@ nav ul li{
     padding: 1rem;
     list-style: none;   
 }
+
+.nav.toggle {
+    position: fixed;
+    top: 0;
+    right: -8rem;
+    flex-direction: column;
+    width: 35%;
+    height: 100vh;
+    background: white;
+    border-radius: 8px 0px 0px 8px;
+    z-index: 99;
+    transform: translateX(-20%);
+    transition: transform .25s ease;
+}
+
+
+.nav.toggle ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav.toggle ul li a{
+    font-size:1.5rem;
+}
+
 
 nav .search-user #account {
     display: flex;
@@ -358,7 +389,6 @@ button:hover{
 .container .create-account .create-content p{
     text-align: center;
     font-family: "Oswald",sans-serif;
-    margin-left: 1.5rem;
 }
 
 .container .create-account .create-content p:hover{
@@ -389,7 +419,7 @@ button:hover{
 .container .create-account .create-content form button{
     background: crimson;
     align-items: center;
-    margin-left: 10rem;
+    margin-left: 11rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding: 0.8rem;
@@ -635,11 +665,113 @@ button:hover{
     flex-direction:column;
 }
 
-.create-Reservation .create-reservation form #age {
-    position: relative;
-    cursor: pointer;
+.create-Reservation .create-reservation form .name-date {
+    display: flex;
 }
 
+.create-Reservation .create-reservation form .name-date .input-name {
+    position: relative;
+}
+
+.create-Reservation .create-reservation form .name-date .input-name input {
+    width: 95%;
+}
+
+.create-Reservation .create-reservation form .name-date .input-name  input:focus + label,
+input:valid + label {
+    top: -8px;
+    left: 10px;
+    font-size: 15px;
+    padding: 0 1px;
+    background: rgba(128, 128, 128, 0.685);
+
+}
+
+.create-Reservation .create-reservation form .name-date .input-name label{
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    color: white;
+    background: transparent;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    transition: .4s;
+    cursor: text;
+}
+
+.create-Reservation .create-reservation form .count-People {
+    display: flex;
+}
+
+.create-Reservation .create-reservation form .count-People .input-person{
+    position: relative;
+    width: 40%;
+}
+
+.create-Reservation .create-reservation form .count-People .input-person #count {
+    width: 53%;
+}
+
+.create-Reservation .create-reservation form .count-People .input-person input:focus + label,
+input:valid + label {
+    top: -10px;
+    left: 59px;
+    font-size: 13px;
+    padding: 0 1px;
+    background: rgba(128, 128, 128, 0.685);
+
+}
+
+.create-Reservation .create-reservation form .count-People .input-person label{
+    position: absolute;
+    top: 10px;
+    left: 61px;
+    color: white;
+    background: transparent;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    transition: .4s;
+    cursor: text;
+}
+
+.create-Reservation .create-reservation form #age {
+    cursor: pointer;
+    width: 35%;
+}
+
+.create-Reservation .create-reservation form .count-People .input-number{
+    position: relative;
+    width: 40%;
+}
+
+
+.create-Reservation .create-reservation form .count-People .input-number input:focus + label,
+input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 13px;
+    padding: 0 1px;
+    background: rgba(128, 128, 128, 0.685);
+
+}
+
+.create-Reservation .create-reservation form .count-People .input-number label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background: transparent;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    transition: .4s;
+    cursor: text;
+}
 
 .create-Reservation .create-reservation form input {
     color: white;
@@ -652,17 +784,15 @@ button:hover{
     outline: none;
 }
 
+
 .create-Reservation .create-reservation form button {
     margin-bottom: 1rem;
-    
 }
 
 .create-Reservation .create-reservation form #count {
     width: 20%;
     margin-left: 3.5rem;
-
 }
-
 
 /* menu */
 
@@ -1792,7 +1922,7 @@ button:hover{
 #contact-us .contact-content{
     grid-area: left;
     color: white;
-    margin-top: 4rem;
+    margin-top: 10rem;
     margin-left: 4rem;
     font-family: "Oswald",sans-serif;
 }
@@ -1804,6 +1934,10 @@ button:hover{
 
 #contact-us .contact-content h3{
     font-size: 2rem;
+}
+
+#contact-us .contact-content p{
+    font-size: 1.3rem;
 }
 
 #contact-us .form-opinion {
@@ -1877,7 +2011,7 @@ button:hover{
 
 .News-letter{
     width: 100%;
-    height: 100%;
+    height: 25%;
     position: relative;
 }
 
@@ -1934,9 +2068,9 @@ footer {
     background:black;
     color: white;
     width: 100%;
-    height: 35vh;
+    height: 30vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 footer .redes-sociais {
@@ -1977,7 +2111,7 @@ footer .contatos-menu {
 }
 
 footer .contatos {
-    width: 20%;
+    width: 35%;
     height: 80%;
     background: black;
     border: none;
@@ -2004,7 +2138,10 @@ footer .contatos ul li:hover{
 footer .contatos ul li a{
     color: white;
     font-size: 0.7rem;
+}
 
+footer .contatos ul li a i {
+    margin-right: 0.5rem;
 }
 
 
@@ -2091,13 +2228,12 @@ footer .content-footer p{
 
 
     nav .search-user #account p:hover{
-        background: grey;
-        color: white;
+        background: green;
+        color: white!important;
     }
   
 
     nav .search-user #account p{
-        box-shadow: 0px 0px 2px 1px rgba(97, 94, 94, 0.562);
         color: white;
         padding: 0.4rem;
         border-radius: 4px;
@@ -2261,6 +2397,10 @@ footer .content-footer p{
         visibility: hidden;
         }
     
+        .container .create-account .create-content p {
+            margin: 0!important;
+        }
+
         .container .create-account .create-content > p:hover{
             cursor: pointer;
             text-decoration: underline;
@@ -2418,6 +2558,10 @@ footer .content-footer p{
             width: 50%;
         }
 
+        #contact-us .form-opinion {
+            height: 100%!important;
+        }
+        
         #contact-us .form-opinion form {
             width: 100%;
         }
@@ -2427,9 +2571,14 @@ footer .content-footer p{
             font-size: 1.8rem;
         }
 
+        #contact-us .contact-content {
+            margin-top: 1rem;
+        }
+
         #contact-us .contact-content p{
             margin-right: 1rem;
         }
+
 
         /** footer **/
 
@@ -2437,7 +2586,7 @@ footer .content-footer p{
             background:black;
             color: white;
             width: 100%;
-            height: 72vh;
+            height: 58vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2535,7 +2684,7 @@ footer .content-footer p{
         /** news-letter */
 
         .News-letter {
-            height: 100%;
+            height: 36%;
         }
         
         .News-letter > img {
@@ -2543,7 +2692,7 @@ footer .content-footer p{
             width: 100px;
             height: 100px;
             right: -1rem;
-            top: 10.8rem;
+            top: 12rem;
             z-index: 0;
         }
         
@@ -2712,7 +2861,7 @@ footer .content-footer p{
 
     #contact-us .form-opinion {
         width: 70%;
-        height: 70%!important;
+        height: 57vh!important;
         background: white;
         padding: 1rem;
         border-radius: 7px;
