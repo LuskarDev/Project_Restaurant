@@ -1,18 +1,18 @@
 <h1 align="center">
-  <img alt="Restaurent Gourmet" title="Restaurent Gourmet" src=".github/rocketq.png" width="220px" />
+  <img alt="Restaurent Gourmet" title="Restaurent Gourmet" src="./images/icons/fork-and-knife-cutlery-circle-interface-symbol-for-restaurant.png" width="120px" />
+  <p> Restaurent Gourmet</p>
 </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
 </p>
 
 <br>
 
 <p align="center">
-  <img alt="Rocket.Q" src=".github/capa.png" width="100%">
+   <img alt="Restaurent Gourmet" title="Restaurent Gourmet" src="./images/Screenshot 2022-01-15 at 15-17-26 Restaurant Gourmet.png" width="720px" />
 </p>
 
 ## 🚀 Tecnologias
