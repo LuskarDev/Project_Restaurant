@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,12 +38,17 @@
   
     </div> 
 
+    <div id="google_translate_element"> </div>
+
           <div id="menu-bar"><img src="images/icons/clipart3035828.png" alt="menu"></div>
 
         <a class="button-to-top" href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
 
+
         <header id="header">
-            <nav class="nav">
+            <nav class="nav">                   
+               
+
                 <img src="images/icons/fork-and-knife-cutlery-circle-interface-symbol-for-restaurant.png" alt="logo">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -176,25 +181,32 @@
             <img src="images/icons/fork-and-knife-cutlery-circle-interface-symbol-for-restaurant.png" alt="logo">
             <h2>Making Reservation...</h2>
             <form action="">
-                <div class="name-date">
-                    <label  class="sr-only" for="name">Name Complete</label>
-                    <input placeholder="Name" type="text" name="name" id="name">
+            
+                    <div class="name-date">
 
+                        <div class="input-name">
+                            <input type="text" name="name" id="name">
+                            <label for="name">Name</label>
+                        </div>
+                
+                            <label  class="sr-only" for="lastname">Date</label>
+                            <input placeholder="Date" type="date" name="number" id="age" required>
+                    </div>
 
-                    <label  class="sr-only" for="lastname">Date</label>
-                    <input placeholder="Date" type="date" name="number" id="age">
-
-                </div>
 
 
                 <div class="count-People">
-                    <label  class="sr-only" for="password"></label>
-                    <input placeholder="Person" type="number" name="count" id="count">
+                    <div class="input-person">
+                        <input type="number"  name="count" id="count"  required>
+                        <label for="count">Person</label>
+                    </div>
 
 
 
-                     <label class="sr-only" for="Whats">whatsapp</label>
-                     <input placeholder="whatsapp" type="number" name="whatsappNumber" id="whatsappNumber">
+                     <div class="input-number">
+                         <input type="number" name="whatsappNumber" id="whatsappNumber"  required>
+                         <label for="whatsappNumber">whatsapp</label>
+                     </div>
 
                 </div>
 
@@ -841,18 +853,6 @@
             </ul>
         </nav>
 
-        <nav class="contatos">
-            <ul>
-                <li>
-                    <p>Menu</p> 
-                </li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-            </ul>
-        </nav>
-
        
     </footer>
 
@@ -873,7 +873,17 @@
 <!-- js owl carousel -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
     <script>
+
 
         $(document).ready(function(){
 
