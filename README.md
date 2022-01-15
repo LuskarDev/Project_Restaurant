@@ -29,8 +29,6 @@ Este é o meu Primeiro projeto como programador... E é apenas o começo
 ## 🔖 Layout
 
 Você pode visualizar o projeto através [desse link](https://luskardev.github.io/Project_Restaurant/).
-## :memo: Licença
 
----
 
 Feito com Carinho by Lucas Oliveira :wave:
