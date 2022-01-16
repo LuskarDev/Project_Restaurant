@@ -12,7 +12,7 @@
 .goog-te-banner-frame {display: none;}
 
 .goog-logo-link {
-   display:none !important;
+   display:none;
 } 
 
 .goog-te-gadget{
@@ -419,8 +419,8 @@ button:hover{
 
 .container .create-account .create-content form button{
     background: crimson;
-    align-items: center;
-    margin-left: 11rem;
+    margin-left: 9rem;
+
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding: 0.8rem;
@@ -741,7 +741,7 @@ input:valid + label {
 
 .create-Reservation .create-reservation form #age {
     cursor: pointer;
-    width: 35%;
+    width: 44%;
 }
 
 .create-Reservation .create-reservation form .count-People .input-number{
